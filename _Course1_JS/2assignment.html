@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Employee Details</h3>
+    <hr />
+
+
+    <fieldset>
+        <legend>Employee Login </legend>
+
+        Product Name : <input type="text" id="t1" />
+        <br /> <br />
+        Unit Price : <input type="number" id="t2" />
+        <br /><br />
+        Quantity : <input type="number" id="t3" />
+        <br /><br />
+        <input type="button" onclick="f1()" value="Get Total" />
+        <p id="p1"></p>
+    </fieldset>
+
+
+
+
+
+    <script>
+
+        function f1() {
+
+            let paraObj = document.getElementById("p1");
+            let pname = document.getElementById("t1").value;
+            let price = document.getElementById("t2").value;
+            let quantity = document.getElementById("t3").value;
+
+            var total = price*quantity;
+
+            if (quantity > 30){
+                total = total * 80/100;
+            }
+            else if (quantity > 20){
+                total = total * 85/100;
+                
+            } 
+            else if(quantity > 10){
+                total = total * 90/100;
+            }
+
+            paraObj.innerHTML = "Total Amount : "+total;
+            
+        }  
+
+    </script>
+
+</body>
+
+</html>

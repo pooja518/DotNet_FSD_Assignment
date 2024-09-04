@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Employee Details</h3>
+    <hr />
+
+
+    <fieldset>
+        <legend>Employee Login </legend>
+
+        Emp no : <input type="number" id="t1" />
+        <br /> <br />
+        Password : <input type="password" id="t2" />
+        <br /><br />
+        Ename : <input type="text" id="t3" />
+        <br /><br />
+        Job : <input type="text" id="t4" />
+        <br /><br />
+        Salary : <input type="number" id="t5" />
+        <br /><br />
+        <input type="button" onclick="f1()" value="Login" />
+        <p id="p1"></p>
+    </fieldset>
+
+
+
+
+
+    <script>
+
+        function f1() {
+
+            let paraObj = document.getElementById("p1");
+            let emp = document.getElementById("t1").value;
+            let ename = document.getElementById("t3").value;
+            let job = document.getElementById("t4").value;
+            let salary = document.getElementById("t5").value;
+
+            paraObj.innerHTML = "Welcome";
+            console.log("Emp no : "+emp+","+"+Ename : "+ename+","+"Job : "+job+","+"Salary: "+salary);
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

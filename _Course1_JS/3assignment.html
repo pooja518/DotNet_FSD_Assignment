@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Mathematical Operations</h3>
+    <hr />
+
+
+    <fieldset>
+        <legend>Peform an operation </legend>
+
+        Number 1 : <input type="number" id="t1" />
+        <br /><br />
+        Number 2 : <input type="number" id="t2" />
+        <br /><br />
+        <input type="button" onclick="f1(event)" value="Add" />
+        <input type="button" onclick="f1(event)" value="Subtract" />
+        <input type="button" onclick="f1(event)" value="Multiply" />
+        <input type="button" onclick="f1(event)" value="Divide" />
+        <p id="p1"></p>
+    </fieldset>
+
+
+
+
+
+    <script>
+
+        function f1(event) {
+
+            let paraObj = document.getElementById("p1");
+            let num1 = parseInt(document.getElementById("t1").value);
+            let num2 = parseInt(document.getElementById("t2").value);
+
+
+            var sign = event.target.value;
+
+            if (sign == "Add"){
+                var answer = num1+num2;
+            }
+            else if(sign == "Subtract"){
+                var answer = num1-num2;
+            }
+            else if(sign == "Multiply"){
+                var answer = num1*num2;
+            }
+            else if(sign == "Divide"){
+                var answer = num1/num2;
+            }
+
+            paraObj.innerHTML = "Answer = "+answer;
+            
+        }  
+
+    </script>
+
+</body>
+
+</html>
